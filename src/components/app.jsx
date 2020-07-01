@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Flat from './flat.jsx';
 import FlatsList from './flats_list.jsx';
-import GoogleMap from './google_map.jsx';
+import SimpleMap from './google_map.jsx';
 // import Marker from './marker.jsx';
 import flats from '../../data/flats.js';
 
@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <FlatsList flats={this.state.flats} />
-        <GoogleMap />
+        <SimpleMap lat={this.props.lat} lng={this.props.lng} />
       </div>
     )
   }
