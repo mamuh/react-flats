@@ -8,3 +8,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+
+.left-scene {
+  flex: 0 0 60%;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+
+.right-scene {
+  flex: 0 0 40%;
+  background-color: #ecf0f1;
+}
