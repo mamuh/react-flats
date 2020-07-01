@@ -10,7 +10,7 @@ class Flat extends Component {
       <div className="flat-card">
         <img src={this.props.img} />
         <p>{this.props.name}</p>
-        <p>{this.props.price}</p>
+        <p>{this.props.curr} {this.props.price}</p>
       </div>
     );
   }

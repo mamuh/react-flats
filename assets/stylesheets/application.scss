@@ -10,16 +10,34 @@ body {
 }
 
 
-.left-scene {
-  flex: 0 0 60%;
-  position: sticky;
+#root > div {
   display: flex;
-  flex-direction: column;
-  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
 }
 
+
+.left-scene {
+  flex: 0 0 60%;
+  // position: sticky;
+  // display: flex;
+  // flex-direction: column;
+  // overflow: scroll;
+}
 
 .right-scene {
   flex: 0 0 40%;
   background-color: #ecf0f1;
+}
+
+.flat-card {
+  img {
+    width: 300px;
+  }
+}
+
+.flats-list {
+  column-count: 2;
+  column-gap: 5px;
+  padding: 5px;
 }

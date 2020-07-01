@@ -21,8 +21,8 @@ class App extends Component {
         <div className="left-scene">
           <FlatsList flats={this.state.flats} />
         </div>
-        <div className="left-scene">
-
+        <div className="right-scene">
+        MAP HERE
         </div>
       </div>
     )

@@ -13,7 +13,7 @@ class FlatsList extends Component {
       <div className="flats-list">
         {flats.map(flat => {
           return (
-            <Flat name={flat.name} img={flat.imageUrl} price={flat.price} key={flat.name} />
+            <Flat name={flat.name} img={flat.imageUrl} price={flat.price} curr={flat.priceCurrency} key={flat.name} />
           );
         })}
       </div>
