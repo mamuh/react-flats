@@ -6,11 +6,14 @@ class Flat extends Component {
   }
 
   render() {
+    const bgImg = this.props.img
     return (
-      <div className="flat-card">
-        <img src={this.props.img} />
-        <p>{this.props.name}</p>
-        <p>{this.props.curr} {this.props.price}</p>
+      <div className="card" style={{ backgroundImage: `url(${bgImg})` }} >
+        <div className="card-category">{this.props.price} {this.props.curr}</div>
+        <div className="card-description">
+          <h2>{this.props.name}</h2>
+        </div>
+        <a className="card-link" href="#"></a>
       </div>
     );
   }

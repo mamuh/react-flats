@@ -10,10 +10,10 @@ class FlatsList extends Component {
   render() {
     const flats = this.props.flats
     return (
-      <div className="flats-list">
+      <div className="flat-list">
         {flats.map(flat => {
           return (
-            <Flat name={flat.name} img={flat.imageUrl} price={flat.price} curr={flat.priceCurrency} key={flat.name} />
+            <Flat className="card" name={flat.name} img={flat.imageUrl} price={flat.price} curr={flat.priceCurrency} key={flat.name} />
           );
         })}
       </div>
