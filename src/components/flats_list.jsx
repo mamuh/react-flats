@@ -8,12 +8,17 @@ class FlatsList extends Component {
   }
 
   render() {
-    const flats = this.props.flats
+    const { flats, selectFlat, selectedFlat } = this.props;
     return (
       <div className="flat-list">
         {flats.map(flat => {
           return (
-            <Flat className="card" name={flat.name} img={flat.imageUrl} price={flat.price} curr={flat.priceCurrency} key={flat.name} />
+            <Flat
+              className="card"
+              flat={flat}
+              selectFlat={selectFlat}
+              selectedFlat={selectedFlat}
+            />
           );
         })}
       </div>

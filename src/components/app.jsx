@@ -11,15 +11,21 @@ class App extends Component {
     super(props);
 
     this.state = {
-      flats: flats
+      selectedFlat: flats[0]
     }
+  }
+
+  selectFlat = selectedFlat => {
+    this.setState({
+      selectedFlat
+    })
   }
 
   render() {
     return (
       <div>
-        <FlatsList flats={this.state.flats} />
-        <SimpleMap lat={this.props.lat} lng={this.props.lng} />
+        <FlatsList flats={flats} selectFlat={this.selectFlat} selectedFlat={this.state.selectedFlat} />
+        <SimpleMap selectedFlat={this.state.selectedFlat} />
       </div>
     )
   }

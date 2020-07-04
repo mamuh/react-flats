@@ -5,13 +5,21 @@ class Flat extends Component {
     super(props);
   }
 
+  handleClick = () => {
+    const { selectFlat, flat } = this.props;
+    selectFlat(flat);
+  }
+
   render() {
-    const bgImg = this.props.img
+    const { selectedFlat, selectFlat, flat } = this.props;
+    const { name, imageUrl, price, priceCurrency } = flat;
+    const isSelected = (flat === selectedFlat);
+
     return (
-      <div className="card" style={{ backgroundImage: `url(${bgImg})` }} >
-        <div className="card-category">{this.props.price} {this.props.curr}</div>
+      <div className={isSelected ? "active card" : " card"} style={{ backgroundImage: `url(${imageUrl})` }} onClick={this.handleClick} >
+        <div className="card-category">{price} {priceCurrency}</div>
         <div className="card-description">
-          <h2>{this.props.name}</h2>
+          <h2>{name}</h2>
         </div>
         <a className="card-link" href="#"></a>
       </div>
