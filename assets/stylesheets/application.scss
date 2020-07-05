@@ -41,3 +41,10 @@ body {
   background-color: red;
   border-radius: 50%;
 }
+
+@media (max-width: 900px) {
+  #root > div {
+    margin-top: 10px;
+    display: block;
+  }
+}
